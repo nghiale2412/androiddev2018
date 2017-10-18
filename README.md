@@ -10,7 +10,7 @@ Students are expected to:
 Student Info
 =======================
 
-* Name: Le Trung Nghia
-* ID: USTHBI5-098
+* Name: Le Trung Nghia, Tran Bao Duong, Nguyen Manh Tuan 
+* ID: USTHBI5-098, USTHBI6-030, USTHBI6-144
 * Group ID: 7
 * Project Name: Flickr Image Browser
