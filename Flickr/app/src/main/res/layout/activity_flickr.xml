@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlickrActivity"
+    android:orientation="vertical">
+    <android.support.design.widget.TabLayout
+        android:id="@+id/maintab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorHeight="0dp"
+        android:background="@color/appBackgroundColor">
+    </android.support.design.widget.TabLayout>
+    <flickr.usth.edu.vn.flickr.LockableViewPager
+        android:id="@+id/lockablepager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </flickr.usth.edu.vn.flickr.LockableViewPager>
+</LinearLayout>
