@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ICT Flickr</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hintSearch">Search Flickr</string>
+    <string name="notifications">Notifications</string>
+</resources>
