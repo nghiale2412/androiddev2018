@@ -9,16 +9,17 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/black">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/relLayout1">
+        <ListView
+            android:id="@+id/feedsList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:dividerHeight="15dp">
 
-            <include layout="@layout/layout_viewpager" />
+        </ListView>
 
-        </RelativeLayout>
 
         <include layout="@layout/layout_bottom_navigation_view"/>
 

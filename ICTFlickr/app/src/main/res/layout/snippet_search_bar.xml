@@ -31,7 +31,7 @@
                     android:id="@+id/searchBarIcon"
                     android:src="@drawable/ic_search"/>
 
-                <TextView
+                <EditText
                     android:layout_toRightOf="@id/searchBarIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -41,7 +41,19 @@
                     android:textStyle="bold"
                     android:textColor="@color/pureWhite"
                     android:textColorHint="@color/pureWhite"
-                    android:background="@null"/>
+                    android:background="@color/menuItemDefaultColor"
+                    android:id="@+id/searchText"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/searchClear"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_action_clear"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"/>
 
             </RelativeLayout>
 

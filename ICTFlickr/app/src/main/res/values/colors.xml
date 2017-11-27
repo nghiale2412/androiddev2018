@@ -9,4 +9,7 @@
     <color name="pureWhite">#ffffff</color>
     <color name="black">#000000</color>
     <color name="black95alpha">#F3000000</color>
+    <color name="pageMainColor">#f2f2f2</color>
+    <color name="pageSecondColor">#d9d9d9</color>
+    <color name="gray60alpha">#99595959</color>
 </resources>

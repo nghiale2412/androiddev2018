@@ -25,16 +25,6 @@ public class CameraActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Log.d(TAG, "onCreate: Started");
-        setupBottomNavigationView();
-    }
-    private void setupBottomNavigationView(){
-        Log.d(TAG, "setupBottomNavigationView: Setting up bottom navigation view");
-        BottomNavigationViewEx bottomNavigationView = (BottomNavigationViewEx) findViewById(R.id.bottomNavView);
-        BottomNavigationViewHelper.setupBottomNavigationView(bottomNavigationView);
-        BottomNavigationViewHelper.enableNavigation(CameraActivity.this, this, bottomNavigationView);
-        Menu menu = bottomNavigationView.getMenu();
-        MenuItem menuItem = menu.getItem(ActivityNumber);
-        menuItem.setChecked(true);
     }
 
     @Override
