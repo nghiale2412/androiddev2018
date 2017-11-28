@@ -39,13 +39,6 @@ public class LoginActivity extends OAuthLoginActivity<FlickrClient> {
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        Button button = (Button) findViewById(R.id.loginButton);
-        button.setVisibility(GONE);
-    }
-
-    @Override
     public void onLoginSuccess() {
         Intent i = new Intent(this, SplashActivity.class);
         startActivity(i);

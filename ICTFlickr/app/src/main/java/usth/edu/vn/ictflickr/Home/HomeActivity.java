@@ -50,7 +50,8 @@ public class HomeActivity extends AppCompatActivity {
     private String realname;
     private String profileImageURL;
     private String id, secret, server, username, title, owner, imageURL;
-    private Integer farm, x, i;
+    private static String test;
+    private Integer farm, x;
 
     FlickrClient client;
 
@@ -88,6 +89,7 @@ public class HomeActivity extends AppCompatActivity {
                         username = photos.getJSONObject(x).getString("username");
                         title = photos.getJSONObject(x).getString("title");
                         owner = photos.getJSONObject(x).getString("owner");
+                        test = owner;
                         newsFeedUserId.add(owner);
                         imageURL = "https://farm" + farm + ".staticflickr.com/" + server + "/" + id + "_" + secret + ".jpg";
                         photo.setPhoto_id(id);
@@ -100,38 +102,10 @@ public class HomeActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                for (i = 0; i < (newsFeedUserId.size()-1); i++) {
-                    client.getUserProfileImage(newsFeedUserId.get(i), new JsonHttpResponseHandler() {
-                        @Override
-                        public void onSuccess(int statusCode, Header[] headers,
-                                              JSONObject json) {
-
-                            Photo photo1 = photoList.get(i);
-                            Log.d("DEBUG", "result: " + json.toString());
-                            try {
-                                JSONObject person = json.getJSONObject("person");
-                                String nsid = person.getString("nsid");
-                                String iconserver = person.getString("iconserver");
-                                Integer iconfarm = person.getInt("iconfarm");
-                                realname = person.getJSONObject("realname").getString("_content");
-                                profileImageURL = "https://farm" + iconfarm + ".staticflickr.com/" + iconserver + "/buddyicons/" + nsid + ".jpg";
-                                photo1.setUser_profile_image(profileImageURL);
-                                photo1.setUser_real_name(realname);
-                                Log.d("DEBUG", "onSuccess: " + photo1.getUser_real_name());
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                            if (i == (newsFeedUserId.size()-1)) {
-                                setNewsFeedItem(photoList);
-                                Log.d("DEBUG", "LIST: setting list");
-                            }
-                            //((Photo) photoList.get(x).setUser_profile_image(profileImageURL);
-                        }
-                    });
-                }
-
+                setNewsFeedItem(photoList);
             }
         });
+        Log.d("DEBUG", "LIST: setting list " + test);
     }
 
     /*client.getUserProfileImage(owner, new JsonHttpResponseHandler() {

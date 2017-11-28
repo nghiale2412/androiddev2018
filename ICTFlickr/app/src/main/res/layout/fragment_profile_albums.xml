@@ -6,19 +6,17 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/pageSecondColor">
         
-        <GridView
+        <ListView
+            android:layout_margin="10dp"
+            android:id="@+id/albumsList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/gridViewAlbums"
-            android:numColumns="3"
-            android:verticalSpacing="1dp"
-            android:horizontalSpacing="1dp"
-            android:stretchMode="columnWidth"
-            android:gravity="center">
+            android:dividerHeight="2dp">
 
-        </GridView>
+        </ListView>
         
     </RelativeLayout>
 

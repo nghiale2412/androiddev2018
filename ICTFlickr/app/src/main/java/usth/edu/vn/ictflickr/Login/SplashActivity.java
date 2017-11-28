@@ -65,7 +65,6 @@ public class SplashActivity extends AppCompatActivity {
             public void onSuccess(int statusCode, Header[] headers,
                                   JSONObject json) {
                 Log.d("DEBUG", "result: " + json.toString());
-                // Add new photos to SQLite
                 try {
                     JSONObject user = json.getJSONObject("user");
                     userId = user.getString("id");

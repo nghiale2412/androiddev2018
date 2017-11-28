@@ -12,4 +12,5 @@
     <color name="pageMainColor">#f2f2f2</color>
     <color name="pageSecondColor">#d9d9d9</color>
     <color name="gray60alpha">#99595959</color>
+    <color name="actAsFilter">#BF4d4d4d</color>
 </resources>

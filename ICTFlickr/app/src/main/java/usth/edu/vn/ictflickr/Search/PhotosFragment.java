@@ -79,7 +79,6 @@ public class PhotosFragment extends Fragment {
                                   JSONObject json) {
                 Log.d("DEBUG", "result: " + json.toString());
                 imageURLs.clear();
-                // Add new photos to SQLite
                 try {
                     JSONArray photos = json.getJSONObject("photos").getJSONArray("photo");
                     for (int x = 0; x < photos.length(); x++) {

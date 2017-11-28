@@ -77,5 +77,21 @@ public class FlickrClient extends OAuthBaseClient {
         client.get(apiUrl, null, handler);
     }
 
+    public void getAlbumsList(String userId,AsyncHttpResponseHandler handler){
+        String apiUrl = getApiUrl("?method=flickr.photosets.getList" +
+                "&format=json&nojsoncallback=1" +
+                "&user_id=" + userId);
+        Log.d("DEBUG", "Sending API call to " + apiUrl);
+        client.get(apiUrl, null, handler);
+    }
+
+    public void getAlbumDetailItems(String userId, String albumId, AsyncHttpResponseHandler handler){
+        String apiUrl = getApiUrl("?method=flickr.photosets.getPhotos" +
+                "&format=json&nojsoncallback=1" + "&photoset_id=" + albumId +
+                "&user_id=" + userId);
+        Log.d("DEBUG", "Sending API call to " + apiUrl);
+        client.get(apiUrl, null, handler);
+    }
+
 
 }

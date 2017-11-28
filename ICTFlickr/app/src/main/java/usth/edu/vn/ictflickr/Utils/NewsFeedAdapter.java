@@ -51,7 +51,7 @@ public class NewsFeedAdapter extends ArrayAdapter<Photo> {
 
     static class ViewHolder{
         CircleImageView mProfileImage;
-        TextView username, title;
+        TextView user_real_name, title;
         ImageView imageView;
         ImageView favoriteWhite, favoriteBlue, comment, share;
         GestureDetector detector;
@@ -70,7 +70,7 @@ public class NewsFeedAdapter extends ArrayAdapter<Photo> {
             viewHolder = new ViewHolder();
             viewHolder.mProgressBar = (ProgressBar) convertView.findViewById(R.id.feedProgressBar);
             viewHolder.title = (TextView) convertView.findViewById(R.id.imageTitle);
-            viewHolder.username = (TextView) convertView.findViewById(R.id.contactName);
+            viewHolder.user_real_name = (TextView) convertView.findViewById(R.id.contactName);
             viewHolder.mProfileImage = (CircleImageView) convertView.findViewById(R.id.contactProfileImage);
             viewHolder.imageView = (ImageView) convertView.findViewById(R.id.contactImage);
             viewHolder.favoriteWhite = (ImageView) convertView.findViewById(R.id.favoriteIcon);
@@ -98,8 +98,10 @@ public class NewsFeedAdapter extends ArrayAdapter<Photo> {
             }
         });
 
+        viewHolder.favoriteWhite.setVisibility(View.VISIBLE);
+        viewHolder.favoriteBlue.setVisibility(View.GONE);
         viewHolder.mProgressBar.setVisibility(View.GONE);
-        viewHolder.username.setText(getItem(position).getUser_real_name());
+        viewHolder.user_real_name.setText(getItem(position).getUser_name());
         viewHolder.title.setText(getItem(position).getTitle());
         String imageURL = getItem(position).getImageURL();
         String profileImageURL = getItem(position).getUser_profile_image();

@@ -50,7 +50,6 @@
             android:text="@string/log_in"
             android:textStyle="bold"
             android:textColor="@color/pureWhite"
-            android:textSize="17sp"
-            android:visibility="visible" />
+            android:textSize="17sp"/>
     </RelativeLayout>
 </RelativeLayout>
